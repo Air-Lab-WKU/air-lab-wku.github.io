@@ -1,0 +1,44 @@
+name: Update Google Scholar data
+
+on:
+  schedule:
+    # Every Monday at 13:00 UTC
+    - cron: '0 13 * * 1'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-scholar-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Fetch latest Google Scholar data
+        run: python scripts/update_scholar_data.py
+
+      - name: Commit and push if changed
+        run: |
+          if git diff --quiet -- data/; then
+            echo "No changes to publication data, nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git commit -m "Auto-update Google Scholar citation data"
+          git push

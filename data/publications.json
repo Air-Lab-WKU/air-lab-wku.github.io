@@ -1,0 +1,69 @@
+{
+  "last_updated": "2026-08-29T22:57:22+00:00",
+  "entries": [
+    {
+      "title": "EpiClim: weekly district-wise all-India multi-epidemics climate-health dataset for accelerated GeoHealth research",
+      "year": "2026",
+      "citation": "Environmental Research: Health 4 (1), 014501, 2026",
+      "num_citations": 9,
+      "badge": "Journal",
+      "url": ""
+    },
+    {
+      "title": "SOLWEIG-GPU: GPU-accelerated Thermal comfort modeling framework for Urban digital twins",
+      "year": "2026",
+      "citation": "Journal of Open Source Software 11 (118), 9535, 2026",
+      "num_citations": 3,
+      "badge": "Journal",
+      "url": ""
+    },
+    {
+      "title": "The Paris 2024 Olympics Research Demonstration Project",
+      "year": "2026",
+      "citation": "Bulletin of the American Meteorological Society, BAMS-D-25-0008.1, 2026",
+      "num_citations": 2,
+      "badge": "Journal",
+      "url": ""
+    },
+    {
+      "title": "Climate Change, Environmental Degradation, and Human Health: A Converging Crisis",
+      "year": "2026",
+      "citation": "Habitable Planet 2 (1), 108-127, 2026",
+      "num_citations": 2,
+      "badge": "Journal",
+      "url": ""
+    },
+    {
+      "title": "Urban heat mitigation under realistic roof and land area constraints",
+      "year": "2026",
+      "citation": "Environmental Research Letters 21 (2), 024001, 2026",
+      "num_citations": 2,
+      "badge": "Journal",
+      "url": ""
+    },
+    {
+      "title": "Harnessing Land\u2013Atmosphere Interactions to Enhance Subseasonal-to-Seasonal Predictability",
+      "year": "2026",
+      "citation": "Bulletin of the American Meteorological Society 107 (8), E1854-E1861, 2026",
+      "num_citations": 1,
+      "badge": "Journal",
+      "url": ""
+    },
+    {
+      "title": "A deep learning bias-correction layer for land surface models: application to soil moisture during drought and hurricane events",
+      "year": "2026",
+      "citation": "Machine Learning: Earth 2 (1), 01LT02, 2026",
+      "num_citations": 1,
+      "badge": "Journal",
+      "url": ""
+    },
+    {
+      "title": "Evaluating the Fidelity of GraphCast AI Forecasts for the Indian Summer Monsoon: A Climatological Assessment Against ERA-5 Reanalysis and IMERG Observations",
+      "year": "2026",
+      "citation": "arXiv preprint arXiv:2607.11905, 2026",
+      "num_citations": 0,
+      "badge": "Preprint",
+      "url": ""
+    }
+  ]
+}

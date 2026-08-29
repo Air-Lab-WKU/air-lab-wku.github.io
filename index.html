@@ -461,8 +461,8 @@
     </div>
     <div class="hero-right">
       <div class="hero-stats">
-        <div class="hero-stat"><div class="stat-n">5,000<sup>+</sup></div><div class="stat-l">Research Citations</div></div>
-        <div class="hero-stat"><div class="stat-n">100<sup>+</sup></div><div class="stat-l">Publications</div></div>
+        <div class="hero-stat"><div class="stat-n" id="stat-citations">5,000<sup>+</sup></div><div class="stat-l">Research Citations</div></div>
+        <div class="hero-stat"><div class="stat-n" id="stat-publications">100<sup>+</sup></div><div class="stat-l">Publications</div></div>
         <div class="hero-stat"><div class="stat-n">11<sup>+</sup></div><div class="stat-l">Years of Research</div></div>
         <div class="hero-stat"><div class="stat-n">4</div><div class="stat-l">Research Domains</div></div>
       </div>
@@ -644,11 +644,12 @@
       <div>
         <div class="section-label" style="color:rgba(198,12,48,.75);">Publications</div>
         <h2 class="section-title light">Recent <em>Research</em> Output</h2>
-        <p class="section-desc" style="color:rgba(255,255,255,.42);">Selected from 100+ publications with 5,000+ citations. View the complete list on Google Scholar.</p>
+        <p class="section-desc" style="color:rgba(255,255,255,.42);" id="pub-summary">Selected from 100+ publications with 5,000+ citations. View the complete list on Google Scholar.</p>
+        <p style="color:rgba(255,255,255,.28);font-size:.7rem;margin-top:.4rem;" id="pub-updated"></p>
       </div>
       <a href="https://scholar.google.com/citations?user=4F4aasoAAAAJ" target="_blank" class="pub-all">View All on Google Scholar →</a>
     </div>
-    <div class="pub-list">
+    <div class="pub-list" id="pub-list">
       <div class="pub-item reveal">
         <div class="pub-year">2025</div>
         <div>
@@ -1022,6 +1023,63 @@
     s.style.display = 'block'; e.target.reset();
     setTimeout(() => s.style.display = 'none', 6000);
   }
+
+  // Auto-updated Google Scholar stats + publications.
+  // data/scholar-stats.json and data/publications.json are refreshed weekly
+  // by a GitHub Actions workflow (see .github/workflows/update-scholar-data.yml).
+  // If the fetch fails for any reason, the hand-written fallback content
+  // already in the page is left exactly as-is.
+  (function loadScholarData() {
+    function esc(str) {
+      const d = document.createElement('div');
+      d.textContent = str == null ? '' : String(str);
+      return d.innerHTML;
+    }
+
+    fetch('data/scholar-stats.json', { cache: 'no-store' })
+      .then(r => r.ok ? r.json() : Promise.reject(r.status))
+      .then(stats => {
+        const citeEl = document.getElementById('stat-citations');
+        const pubEl = document.getElementById('stat-publications');
+        const summaryEl = document.getElementById('pub-summary');
+        const updatedEl = document.getElementById('pub-updated');
+        if (citeEl && typeof stats.citedby === 'number') {
+          citeEl.innerHTML = stats.citedby.toLocaleString() + '<sup>+</sup>';
+        }
+        if (pubEl && typeof stats.num_publications === 'number') {
+          pubEl.innerHTML = stats.num_publications.toLocaleString() + '<sup>+</sup>';
+        }
+        if (summaryEl && typeof stats.citedby === 'number' && typeof stats.num_publications === 'number') {
+          summaryEl.textContent = `Selected from ${stats.num_publications}+ publications with ${stats.citedby.toLocaleString()}+ citations. View the complete list on Google Scholar.`;
+        }
+        if (updatedEl && stats.last_updated) {
+          const d = new Date(stats.last_updated);
+          updatedEl.textContent = 'Citation data auto-updated from Google Scholar · last refreshed ' +
+            d.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
+        }
+      })
+      .catch(() => { /* keep static fallback numbers already in the page */ });
+
+    fetch('data/publications.json', { cache: 'no-store' })
+      .then(r => r.ok ? r.json() : Promise.reject(r.status))
+      .then(data => {
+        const list = document.getElementById('pub-list');
+        const entries = data.entries;
+        if (!list || !Array.isArray(entries) || entries.length === 0) return;
+
+        list.innerHTML = entries.map((pub, i) => `
+          <div class="pub-item">
+            <div class="pub-year">${esc(pub.year)}</div>
+            <div>
+              <div class="pub-title">${esc(pub.title)}</div>
+              <div class="pub-journal">${esc(pub.citation)}</div>
+            </div>
+            <div class="pub-badge${i === 0 ? ' hl' : ''}">${esc(pub.badge || 'Journal')}</div>
+          </div>
+        `).join('');
+      })
+      .catch(() => { /* keep static fallback list already in the page */ });
+  })();
 </script>
 </body>
 </html>

@@ -4,6 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AIR Lab – AI Research Laboratory | WKU DSOC</title>
+  <meta name="description" content="AIR Lab is the AI Research Laboratory within WKU's Disaster Science Operation Center, building AI systems for weather forecasting, flood and wildfire digital twins, climate modeling, and disaster science." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="AIR Lab – AI Research Laboratory | WKU DSOC" />
+  <meta property="og:description" content="AI systems for weather forecasting, disaster digital twins, climate modeling, and Earth observation — from the AIR Lab at Western Kentucky University." />
+  <meta property="og:url" content="https://air-lab-wku.github.io/" />
+  <meta property="og:image" content="https://air-lab-wku.github.io/Manmeetsingh.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AIR Lab – AI Research Laboratory | WKU DSOC" />
+  <meta name="twitter:description" content="AI systems for weather forecasting, disaster digital twins, climate modeling, and Earth observation — from the AIR Lab at Western Kentucky University." />
+  <meta name="twitter:image" content="https://air-lab-wku.github.io/Manmeetsingh.jpg" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@300;400;500;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
   <style>
@@ -185,8 +196,16 @@
     /* PUBLICATIONS */
     #publications { background: var(--gray-800); }
     .pub-header { display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:2.75rem; }
+    .pub-header-actions { display:flex; align-items:center; gap:1rem; }
     .pub-all { font-family:var(--font-ui); font-size:.78rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.45); border-bottom:1px solid rgba(255,255,255,.18); padding-bottom:2px; transition:color .2s,border-color .2s; }
     .pub-all:hover { color:white; border-color:rgba(255,255,255,.55); }
+    .scroll-toggle { width:32px; height:32px; flex-shrink:0; border-radius:50%; border:1px solid var(--gray-200); background:white; color:var(--gray-600); font-size:.8rem; line-height:1; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:border-color .2s,color .2s; }
+    .scroll-toggle:hover { border-color:var(--wku-red); color:var(--wku-red); }
+    .scroll-toggle.dark { background:transparent; border-color:rgba(255,255,255,.25); color:rgba(255,255,255,.65); }
+    .scroll-toggle.dark:hover { border-color:white; color:white; }
+    .pub-viewport { position:relative; max-height:480px; overflow-y:auto; scrollbar-width:none; -ms-overflow-style:none; }
+    .pub-viewport::-webkit-scrollbar { display:none; }
+    .pub-viewport::after { content:''; position:absolute; left:0; right:0; bottom:0; height:56px; background:linear-gradient(to bottom, rgba(46,49,48,0), var(--gray-800)); pointer-events:none; }
     .pub-list { display:flex; flex-direction:column; }
     .pub-item { display:grid; grid-template-columns:78px 1fr 108px; gap:2rem; align-items:center; padding:1.65rem 1.8rem; border-bottom:1px solid rgba(255,255,255,.055); transition:background .2s; position:relative; }
     .pub-item:hover { background:rgba(255,255,255,.03); }
@@ -199,6 +218,22 @@
     .pub-journal { font-size:.78rem; color:var(--wku-red); opacity:.75; font-style:italic; }
     .pub-badge { font-family:var(--font-ui); font-size:.62rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; padding:5px 10px; text-align:center; align-self:center; border:1px solid rgba(255,255,255,.13); color:rgba(255,255,255,.4); white-space:nowrap; }
     .pub-badge.hl { border-color:var(--wku-red); color:var(--wku-red); background:rgba(198,12,48,.08); }
+
+    /* NEWS */
+    #news { background: var(--off-white); }
+    .news-header { display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:.5rem; gap:2rem; flex-wrap:wrap; }
+    .news-viewport { position:relative; max-height:430px; overflow-y:auto; scrollbar-width:none; -ms-overflow-style:none; }
+    .news-viewport::-webkit-scrollbar { display:none; }
+    .news-viewport::after { content:''; position:absolute; left:0; right:0; bottom:0; height:56px; background:linear-gradient(to bottom, rgba(248,245,242,0), var(--off-white)); pointer-events:none; }
+    .news-list { display:flex; flex-direction:column; }
+    .news-row { padding:1.5rem 0; border-top:1px solid var(--gray-200); }
+    .news-row-top { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-bottom:.5rem; }
+    .news-row-date { font-family:var(--font-ui); font-size:.72rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--wku-red); }
+    .news-tag { font-family:var(--font-ui); font-size:.6rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; padding:3px 9px; background:var(--wku-red-light); color:var(--wku-red); border:1px solid rgba(198,12,48,.18); white-space:nowrap; }
+    .news-title { font-family:var(--font-serif); font-size:1.08rem; font-weight:800; color:var(--black); line-height:1.4; margin-bottom:.4rem; }
+    .news-desc { font-size:.92rem; line-height:1.8; color:var(--gray-600); }
+    .news-link { font-family:var(--font-ui); font-size:.72rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--wku-red); display:inline-block; margin-top:.5rem; border-bottom:1px solid rgba(198,12,48,.3); transition:border-color .2s; }
+    .news-link:hover { border-color:var(--wku-red); }
 
     /* SERVICES */
     #services { background: var(--off-white); }
@@ -239,46 +274,25 @@
     .flink.red:hover { background:var(--wku-red-dark); }
 
     .students-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.4rem; }
-    .stu-card { background:var(--off-white); border:1px solid var(--gray-200); overflow:hidden; transition:box-shadow .3s,transform .3s; }
+    .stu-card { background:var(--off-white); border:1px solid var(--gray-200); transition:box-shadow .3s,transform .3s; padding:1.4rem 1.4rem 1.5rem; }
     .stu-card:hover { box-shadow:var(--shadow-md); transform:translateY(-4px); }
-    ..stu-photo{
-  width: 100%;
-  aspect-ratio: 4 / 3;     
-  background: #f5f5f5;
-  overflow: hidden;
-  position: relative;
-}
-
-.stu-photo img{
-  width: 100%;
-  height: 100%;
-  object-fit: contain;       
-  object-position: center;
-  display: block;
-  background: #fff;          
-}
-.stu-email{
-  margin: 0 0 .65rem;
-  font-size: .78rem;
-  color: var(--gray-600);
-}
-
-.stu-email a{
-  color: var(--wku-red);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(200,16,46,.25);
-}
-
-.stu-email a:hover{
-  border-bottom-color: rgba(200,16,46,.9);
-}
-    .stu-placeholder { width:100%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; background:linear-gradient(160deg,#ece8e4,#d8d4d0); color:var(--gray-400); gap:8px; font-family:var(--font-ui); font-size:.62rem; letter-spacing:.1em; text-transform:uppercase; }
-    .stu-placeholder .ph { width:65px; height:65px; border-radius:50%; background:var(--gray-400); display:flex; align-items:center; justify-content:center; font-size:1.9rem; color:white; }
-    .stu-info { padding:1.4rem 1.4rem 1.65rem; }
-    .stu-name { font-family:var(--font-sans); font-size:1rem; font-weight:600; color:var(--black); margin-bottom:.18rem; }
-    .stu-role { font-family:var(--font-ui); font-size:.65rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--wku-red); margin-bottom:.65rem; }
-    .stu-desc { font-size:.81rem; color:var(--gray-600); line-height:1.65; }
+    .stu-head { display:flex; align-items:center; gap:.9rem; margin-bottom:1rem; }
+    .stu-photo { width:62px; height:62px; flex-shrink:0; border-radius:50%; overflow:hidden; background:#f0f0f0; }
+    .stu-photo img { width:100%; height:100%; object-fit:cover; object-position:center top; display:block; }
+    .stu-placeholder { width:100%; height:100%; display:flex; align-items:center; justify-content:center; background:var(--gray-400); color:white; font-family:var(--font-ui); font-weight:700; font-size:1.15rem; }
+    .stu-email { margin: 0 0 .65rem; font-size: .78rem; color: var(--gray-600); }
+    .stu-email a { color: var(--wku-red); text-decoration: none; border-bottom: 1px solid rgba(200,16,46,.25); }
+    .stu-email a:hover { border-bottom-color: rgba(200,16,46,.9); }
+    .stu-name { font-family:var(--font-sans); font-size:1.15rem; font-weight:700; color:var(--black); margin-bottom:.22rem; }
+    .stu-role { font-family:var(--font-ui); font-size:.7rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--wku-red); }
+    .stu-desc { font-size:.9rem; font-weight:500; color:var(--gray-800); line-height:1.75; }
     .stu-tags { display:flex; flex-wrap:wrap; gap:.32rem; margin-top:.65rem; }
+    .photo-pending { font-size:.66rem; color:var(--gray-400); font-style:italic; margin-top:.15rem; }
+
+    .team-badge { display:inline-block; font-family:var(--font-ui); font-size:.63rem; font-weight:700; letter-spacing:.09em; text-transform:uppercase; padding:3px 9px; background:var(--gray-800); color:white; margin-bottom:.45rem; }
+    .team-badge.undergrad { background:#F5E6C8; color:#8A5B00; border:1px solid rgba(138,91,0,.25); }
+    .team-badge.collab { background:#1E3A5F; color:white; }
+    .openpos-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1.4rem; }
 
     .open-pos { background:transparent; border:2px dashed var(--gray-200); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:2.8rem 1.8rem; min-height:320px; transition:border-color .3s; }
     .open-pos:hover { border-color:var(--wku-red); }
@@ -350,6 +364,11 @@
       .faculty-card{grid-template-columns:1fr;}
       .fac-photo{min-height:200px;}
       .students-grid{grid-template-columns:1fr 1fr;}
+      .openpos-grid{grid-template-columns:1fr;}
+      .news-viewport{max-height:none;}
+      .news-viewport::after{display:none;}
+      .pub-viewport{max-height:none;}
+      .pub-viewport::after{display:none;}
       .footer-main{grid-template-columns:1fr;}
       .footer-bot{flex-direction:column;gap:.5rem;text-align:center;}
       .pub-item{grid-template-columns:58px 1fr;}
@@ -360,6 +379,12 @@
       .students-grid{grid-template-columns:1fr;}
       .services-grid{grid-template-columns:1fr;}
       .about-cards{grid-template-columns:1fr;}
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .news-viewport, .pub-viewport { max-height:none; }
+      .news-viewport::after, .pub-viewport::after { display:none; }
+      .scroll-toggle { display:none; }
+      .reveal { transition:none; opacity:1; transform:none; }
     }
     /* mobile nav open */
     .nav-open .nav-links{display:flex;flex-direction:column;position:absolute;top:68px;left:0;right:0;background:var(--wku-red);gap:0;z-index:999;}
@@ -412,6 +437,7 @@
     <ul class="nav-links" id="navLinks">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
+      <li><a href="#news">News</a></li>
       <li><a href="#research">Research</a></li>
       <li><a href="#focus">Current Focus</a></li>
       <li><a href="#publications">Publications</a></li>
@@ -540,6 +566,76 @@
 
 <hr class="rule"/>
 
+<!-- ====== NEWS ====== -->
+<section id="news">
+  <div class="container">
+    <div class="news-header">
+      <div>
+        <div class="section-label">Latest News</div>
+        <h2 class="section-title">Lab <em>Highlights</em></h2>
+        <p class="section-desc">Recent talks, awards, and team updates from AIR Lab.</p>
+      </div>
+      <button type="button" class="scroll-toggle" id="news-scroll-toggle" aria-pressed="false" aria-label="Pause auto-scrolling news">⏸</button>
+    </div>
+    <div class="news-viewport" id="news-viewport">
+      <div class="news-list" id="news-list">
+
+        <div class="news-row reveal">
+          <div class="news-row-top">
+            <span class="news-row-date">October 2, 2026</span>
+            <span class="news-tag">Publication</span>
+          </div>
+          <div class="news-title">Two papers accepted to the AI-Native Academia workshop at NeurIPS 2026</div>
+          <p class="news-desc"><em>“ReviewShield: Defending LLM Reviewers Against In-Paper Prompt Injection under Instruction-Content Entanglement”</em> (Somnath Luitel, Prabhjot Singh, Suraj Thapa, Manmeet Singh, Josh Durkee) was accepted as an <strong>Oral</strong>, and <em>“Talking a Rejection Into an Accept? Confidence Framing and the Model-Specific Style Sensitivity of LLM Reviewers”</em> (Prabhjot Singh, Somnath Luitel, Manmeet Singh) was accepted as a <strong>Poster</strong> — both at the AI-Native Academia workshop, NeurIPS 2026.</p>
+        </div>
+
+        <div class="news-row reveal d1">
+          <div class="news-row-top">
+            <span class="news-row-date">October 2026</span>
+            <span class="news-tag">Recognition</span>
+          </div>
+          <div class="news-title">Dr. Manmeet Singh recognized among the World's Top 5% of Scientists</div>
+          <p class="news-desc">Dr. Manmeet Singh has been named among the world's top 5% of scientists in a global bibliometric ranking of more than 10 million researchers, reflecting his contributions to AI, atmospheric, climate, and disaster science since joining WKU's Department of Earth, Environmental &amp; Atmospheric Sciences.</p>
+          <a href="https://lnkd.in/p/euiXjC9U" target="_blank" class="news-link">Read the announcement →</a>
+        </div>
+
+        <div class="news-row reveal d2">
+          <div class="news-row-top">
+            <span class="news-row-date">October 2026</span>
+            <span class="news-tag">Team</span>
+          </div>
+          <div class="news-title">Prabhjot Singh joins AIR Lab as External Collaborator</div>
+          <p class="news-desc">We're glad to welcome Prabhjot Singh, an AI Research Scientist and MS student in AI at UT Austin, as an external collaborator working on AI for disaster science and trustworthy AI.</p>
+          <a href="#people" class="news-link">Meet the team →</a>
+        </div>
+
+        <div class="news-row reveal d3">
+          <div class="news-row-top">
+            <span class="news-row-date">September 25, 2026</span>
+            <span class="news-tag">Presentation</span>
+          </div>
+          <div class="news-title">AirCast-SR presented at NSF EPSCoR SuperCollider 2026</div>
+          <p class="news-desc">Graduate researcher Somnath Luitel presented <em>“AirCast-SR: A Foundation Model for Kilometer-Scale Atmospheric Super-Resolution via Conditional Diffusion”</em> at the Kentucky NSF EPSCoR SuperCollider 2026 all-hands meeting in Lexington, KY.</p>
+          <a href="https://kynsfepscor.uky.edu/highlights-and-events/supercollider/" target="_blank" class="news-link">Event details →</a>
+        </div>
+
+        <div class="news-row reveal d4">
+          <div class="news-row-top">
+            <span class="news-row-date">September 7–9, 2026</span>
+            <span class="news-tag">Award</span>
+          </div>
+          <div class="news-title">MSc Poster Award at Environmental Intelligence 2026</div>
+          <p class="news-desc">Graduate researcher Somnath Luitel received an MSc Poster Presentation Award at Environmental Intelligence 2026, hosted at the University of Exeter, UK.</p>
+          <a href="https://www.environmentalintelligence2026.org/home" target="_blank" class="news-link">Conference site →</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule"/>
+
 <!-- ====== RESEARCH ====== -->
 <section id="research">
   <div class="container">
@@ -647,8 +743,12 @@
         <p class="section-desc" style="color:rgba(255,255,255,.42);" id="pub-summary">Selected from 100+ publications with 5,000+ citations. View the complete list on Google Scholar.</p>
         <p style="color:rgba(255,255,255,.28);font-size:.7rem;margin-top:.4rem;" id="pub-updated"></p>
       </div>
-      <a href="https://scholar.google.com/citations?user=4F4aasoAAAAJ" target="_blank" class="pub-all">View All on Google Scholar →</a>
+      <div class="pub-header-actions">
+        <a href="https://scholar.google.com/citations?user=4F4aasoAAAAJ" target="_blank" class="pub-all">View All on Google Scholar →</a>
+        <button type="button" class="scroll-toggle dark" id="pub-scroll-toggle" aria-pressed="false" aria-label="Pause auto-scrolling publications">⏸</button>
+      </div>
     </div>
+    <div class="pub-viewport" id="pub-viewport">
     <div class="pub-list" id="pub-list">
       <div class="pub-item reveal">
         <div class="pub-year">2025</div>
@@ -704,6 +804,7 @@
         </div>
         <div class="pub-badge">IPCC · AR6</div>
       </div>
+    </div>
     </div>
   </div>
 </section>
@@ -813,30 +914,97 @@
       </div>
     </div>
 
-    <div class="people-sublabel" style="margin-top:1rem;">Graduate Researchers</div>
+    <div class="people-sublabel" style="margin-top:1rem;">Research Team</div>
     <div class="students-grid">
 
       <!-- Somnath Luitel -->
       <div class="stu-card reveal">
-        <div class="stu-photo" id="somnathPhoto">
-          <img src="Somnath.jpg" alt="Somnath Luitel"/>
+        <div class="stu-head">
+          <div class="stu-photo" id="somnathPhoto">
+            <img src="Somnath.jpg" alt="Somnath Luitel"/>
+          </div>
+          <div>
+            <span class="team-badge">AIR Lab · Graduate</span>
+            <div class="stu-name">Somnath Luitel</div>
+            <div class="stu-role">Graduate Researcher</div>
+          </div>
         </div>
-        <div class="stu-info">
-          <div class="stu-name">Somnath Luitel</div>
-          <div class="stu-role">Graduate Researcher</div>
-          <div class="stu-email">
-      <a href="mailto:somnath.luitel416@topper.wku.edu">somnath.luitel416@topper.wku.edu</a>
-    </div>
-          <div class="stu-desc">
-            Somnath Luitel is a graduate researcher at AIR Lab, Western Kentucky University, conducting AI and climate research under the supervision of Dr. Manmeet Singh. Originally from Nepal, he earned his Bachelor’s degree in Civil Engineering from Pulchowk Campus, Tribhuvan University. His research focuses on AI applications in weather and climate science.
-          </div>
-          <div class="stu-tags">
-            <span class="ftag">AI / ML</span>
-            <span class="ftag">Climate Science</span>
-            <span class="ftag">WKU EEAS</span>
-          </div>
+        <div class="stu-email">
+          <a href="mailto:somnath.luitel416@topper.wku.edu">somnath.luitel416@topper.wku.edu</a>
+        </div>
+        <div class="stu-desc">
+          Somnath Luitel is a graduate researcher at AIR Lab, Western Kentucky University, conducting AI and climate research under the supervision of Dr. Manmeet Singh. Originally from Nepal, he earned his Bachelor’s degree in Civil Engineering from Pulchowk Campus, Tribhuvan University. His research focuses on AI applications in weather and climate science.
+        </div>
+        <div class="stu-tags">
+          <span class="ftag">AI / ML</span>
+          <span class="ftag">Climate Science</span>
+          <span class="ftag">WKU EEAS</span>
+        </div>
+        <div class="fac-links" style="margin-top:.75rem;">
+          <a href="https://somnathluitel.com.np/" target="_blank" class="flink">Website</a>
+          <a href="https://www.linkedin.com/in/somnath-luitel/" target="_blank" class="flink">LinkedIn</a>
+          <a href="https://scholar.google.com/citations?user=Tw-x1JYAAAAJ&hl=en" target="_blank" class="flink">Scholar</a>
         </div>
       </div>
+
+      <!-- Robert Lesoski -->
+      <div class="stu-card reveal d1">
+        <div class="stu-head">
+          <div class="stu-photo" id="robertPhoto">
+            <div class="stu-placeholder">RL</div>
+          </div>
+          <div>
+            <span class="team-badge undergrad">AIR Lab · Undergraduate</span>
+            <div class="stu-name">Robert Lesoski</div>
+            <div class="stu-role">Undergraduate Research Assistant</div>
+          </div>
+        </div>
+        <div class="photo-pending">Photo coming soon</div>
+        <div class="stu-email">
+          <a href="mailto:robert.lesoski138@topper.wku.edu">robert.lesoski138@topper.wku.edu</a>
+        </div>
+        <div class="stu-desc">
+          Robert Lesoski is an undergraduate research assistant at AIR Lab, Western Kentucky University. Full bio coming soon.
+        </div>
+        <div class="stu-tags">
+          <span class="ftag">WKU EEAS</span>
+        </div>
+      </div>
+
+      <!-- Prabhjot Singh -->
+      <div class="stu-card reveal d2">
+        <div class="stu-head">
+          <div class="stu-photo" id="prabhjotPhoto">
+            <img src="Prabhjot.jpg" alt="Prabhjot Singh"/>
+          </div>
+          <div>
+            <span class="team-badge collab">External Collaborator</span>
+            <div class="stu-name">Prabhjot Singh</div>
+            <div class="stu-role">MS Student in AI, UT Austin · AI Research Scientist</div>
+          </div>
+        </div>
+        <div class="stu-email">
+          <a href="mailto:Prabhjot.singh@utexas.edu">Prabhjot.singh@utexas.edu</a>
+        </div>
+        <div class="stu-desc">
+          Prabhjot Singh is an AI Research Scientist and MS student in Artificial Intelligence at the University of Texas at Austin, collaborating with AIR Lab, WKU as an external researcher. He builds production-grade AI systems for high-stakes domains, spanning AI for disaster science, multi-agent systems, and trustworthy AI.
+        </div>
+        <div class="stu-tags">
+          <span class="ftag">AI for Disaster Science</span>
+          <span class="ftag">Trustworthy AI</span>
+          <span class="ftag">Multi-Agent Systems</span>
+        </div>
+        <div class="fac-links" style="margin-top:.75rem;">
+          <a href="https://www.linkedin.com/in/prabhjot-singh-chugh/" target="_blank" class="flink">LinkedIn</a>
+          <a href="https://prabhjotschugh.github.io/" target="_blank" class="flink">Portfolio</a>
+          <a href="https://scholar.google.com/citations?user=MOCwrwkAAAAJ&hl=en" target="_blank" class="flink">Scholar</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="people-sublabel" style="margin-top:2.2rem;">Join the Team</div>
+    <div class="openpos-grid">
 
       <!-- Open Position 1 -->
       <div class="open-pos reveal d1">
@@ -948,6 +1116,7 @@
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#news">News</a></li>
         <li><a href="#research">Research</a></li>
         <li><a href="#focus">Current Focus</a></li>
         <li><a href="#publications">Publications</a></li>
@@ -1080,6 +1249,89 @@
       })
       .catch(() => { /* keep static fallback list already in the page */ });
   })();
+
+  // Auto-updated lab news. data/news.json can be edited directly (no code
+  // changes needed) to add/remove items — newest entry first. If the fetch
+  // fails for any reason, the hand-written fallback cards already in the
+  // page are left exactly as-is.
+  (function loadNews() {
+    function esc(str) {
+      const d = document.createElement('div');
+      d.textContent = str == null ? '' : String(str);
+      return d.innerHTML;
+    }
+
+    fetch('data/news.json', { cache: 'no-store' })
+      .then(r => r.ok ? r.json() : Promise.reject(r.status))
+      .then(data => {
+        const list = document.getElementById('news-list');
+        const entries = data.entries;
+        if (!list || !Array.isArray(entries) || entries.length === 0) return;
+
+        list.innerHTML = entries.map(item => `
+          <div class="news-row">
+            <div class="news-row-top">
+              <span class="news-row-date">${esc(item.display_date || item.date)}</span>
+              <span class="news-tag">${esc(item.tag || 'News')}</span>
+            </div>
+            <div class="news-title">${esc(item.title)}</div>
+            <p class="news-desc">${esc(item.desc)}</p>
+            ${item.link ? `<a href="${esc(item.link)}" ${/^https?:\/\//.test(item.link) ? 'target="_blank"' : ''} class="news-link">${esc(item.link_label || 'Learn more →')}</a>` : ''}
+          </div>
+        `).join('');
+      })
+      .catch(() => { /* keep static fallback cards already in the page */ });
+  })();
+
+  // Auto-scroll a viewport so only the top ~3 items show at a time,
+  // slowly cycling through the rest, looping back to the top. Pauses on
+  // hover/focus (so a visitor can read or click a link) and can be
+  // toggled off with the pause button for keyboard/screen-reader users,
+  // per WCAG 2.2.2 (auto-moving content needs a way to stop it). Visitors
+  // with prefers-reduced-motion get the full list with no scrolling at
+  // all (see the CSS media query) and the toggle button is hidden since
+  // there's nothing to pause. Used for both the news feed and the
+  // publications list.
+  function autoScrollViewport(vpId, toggleId) {
+    const vp = document.getElementById(vpId);
+    if (!vp) return;
+    const toggle = toggleId ? document.getElementById(toggleId) : null;
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    let hovering = false;
+    let userPaused = reduceMotion;
+
+    vp.addEventListener('mouseenter', () => hovering = true);
+    vp.addEventListener('mouseleave', () => hovering = false);
+    vp.addEventListener('focusin', () => hovering = true);
+    vp.addEventListener('focusout', () => hovering = false);
+
+    function syncToggle() {
+      if (!toggle) return;
+      toggle.textContent = userPaused ? '▶' : '⏸';
+      toggle.setAttribute('aria-pressed', String(userPaused));
+      toggle.setAttribute('aria-label', userPaused ? 'Resume auto-scrolling' : 'Pause auto-scrolling');
+    }
+    if (toggle) {
+      syncToggle();
+      toggle.addEventListener('click', () => {
+        userPaused = !userPaused;
+        syncToggle();
+      });
+    }
+
+    setInterval(() => {
+      if (hovering || userPaused || vp.scrollHeight <= vp.clientHeight) return;
+      const atBottom = vp.scrollTop + vp.clientHeight >= vp.scrollHeight - 1;
+      if (atBottom) {
+        vp.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        vp.scrollBy({ top: 1, behavior: 'auto' });
+      }
+    }, 40);
+  }
+  autoScrollViewport('news-viewport', 'news-scroll-toggle');
+  autoScrollViewport('pub-viewport', 'pub-scroll-toggle');
 </script>
 </body>
 </html>

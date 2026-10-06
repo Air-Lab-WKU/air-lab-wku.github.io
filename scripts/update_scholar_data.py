@@ -5,10 +5,19 @@ writes the citation stats + recent publications to data/*.json for the
 static site to read at page-load time.
 
 Google Scholar blocks automated traffic aggressively and without warning, so
-this script is written to fail *quietly*: if the fetch doesn't succeed, it
-leaves the existing data files untouched and exits 0. The site then just
-keeps showing the last successfully-fetched numbers until a future run gets
-through. Nothing here should ever break the page.
+a failed fetch leaves the existing data files completely untouched — the
+site just keeps showing the last successfully-fetched numbers. Nothing here
+should ever corrupt or blank out the page's data.
+
+However, the script DOES exit non-zero on a failed fetch, so the GitHub
+Actions run is marked failed and shows up (red X / notification email)
+instead of silently doing nothing. A previous version swallowed all fetch
+errors and always exited 0, which let a real bug (an unpinned transitive
+dependency, bibtexparser 2.x, breaking scholarly's import) sit unnoticed for
+weeks of "successful" runs that never actually updated anything. A failed
+run here is expected to happen occasionally (Scholar does block CI runner
+IPs sometimes) — re-run it manually via `gh workflow run
+update-scholar-data.yml`; only worry if it keeps failing every week.
 """
 import json
 import sys
@@ -86,7 +95,7 @@ def main():
         author = fetch_author_data()
     except Exception as exc:  # noqa: BLE001 - deliberately broad, see module docstring
         print(f"[update_scholar_data] fetch failed, leaving existing data in place: {exc}")
-        return 0
+        return 1
 
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
 

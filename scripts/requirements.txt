@@ -1,1 +1,6 @@
 scholarly==1.7.11
+# scholarly 1.7.11 imports bibtexparser's legacy (1.x) API internally;
+# bibtexparser 2.x removed that module, which silently broke every scrape
+# for weeks (the script's broad except swallowed the ImportError). Pin to
+# the last 1.x release until scholarly is upgraded to support 2.x.
+bibtexparser==1.4.1

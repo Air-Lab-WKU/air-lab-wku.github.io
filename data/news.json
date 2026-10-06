@@ -1,0 +1,50 @@
+{
+  "last_updated": "2026-10-06T00:00:00+00:00",
+  "entries": [
+    {
+      "date": "2026-10-02",
+      "display_date": "October 2, 2026",
+      "tag": "Publication",
+      "title": "Two papers accepted to the AI-Native Academia workshop at NeurIPS 2026",
+      "desc": "“ReviewShield: Defending LLM Reviewers Against In-Paper Prompt Injection under Instruction-Content Entanglement” (Somnath Luitel, Prabhjot Singh, Suraj Thapa, Manmeet Singh, Josh Durkee) was accepted as an Oral, and “Talking a Rejection Into an Accept? Confidence Framing and the Model-Specific Style Sensitivity of LLM Reviewers” (Prabhjot Singh, Somnath Luitel, Manmeet Singh) was accepted as a Poster — both at the AI-Native Academia workshop, NeurIPS 2026.",
+      "link": "",
+      "link_label": ""
+    },
+    {
+      "date": "2026-10-01",
+      "display_date": "October 2026",
+      "tag": "Recognition",
+      "title": "Dr. Manmeet Singh recognized among the World's Top 5% of Scientists",
+      "desc": "Dr. Manmeet Singh has been named among the world's top 5% of scientists in a global bibliometric ranking of more than 10 million researchers, reflecting his contributions to AI, atmospheric, climate, and disaster science since joining WKU's Department of Earth, Environmental & Atmospheric Sciences.",
+      "link": "https://lnkd.in/p/euiXjC9U",
+      "link_label": "Read the announcement →"
+    },
+    {
+      "date": "2026-10-01",
+      "display_date": "October 2026",
+      "tag": "Team",
+      "title": "Prabhjot Singh joins AIR Lab as External Collaborator",
+      "desc": "We're glad to welcome Prabhjot Singh, an AI Research Scientist and MS student in AI at UT Austin, as an external collaborator working on AI for disaster science and trustworthy AI.",
+      "link": "#people",
+      "link_label": "Meet the team →"
+    },
+    {
+      "date": "2026-09-25",
+      "display_date": "September 25, 2026",
+      "tag": "Presentation",
+      "title": "AirCast-SR presented at NSF EPSCoR SuperCollider 2026",
+      "desc": "Graduate researcher Somnath Luitel presented “AirCast-SR: A Foundation Model for Kilometer-Scale Atmospheric Super-Resolution via Conditional Diffusion” at the Kentucky NSF EPSCoR SuperCollider 2026 all-hands meeting in Lexington, KY.",
+      "link": "https://kynsfepscor.uky.edu/highlights-and-events/supercollider/",
+      "link_label": "Event details →"
+    },
+    {
+      "date": "2026-09-07",
+      "display_date": "September 7–9, 2026",
+      "tag": "Award",
+      "title": "MSc Poster Award at Environmental Intelligence 2026",
+      "desc": "Graduate researcher Somnath Luitel received an MSc Poster Presentation Award at Environmental Intelligence 2026, hosted at the University of Exeter, UK.",
+      "link": "https://www.environmentalintelligence2026.org/home",
+      "link_label": "Conference site →"
+    }
+  ]
+}

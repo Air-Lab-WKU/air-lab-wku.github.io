@@ -25,7 +25,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 SCHOLAR_AUTHOR_ID = "4F4aasoAAAAJ"
-MAX_PUBLICATIONS = 8
+MAX_PUBLICATIONS = 15
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 STATS_FILE = DATA_DIR / "scholar-stats.json"
 PUBLICATIONS_FILE = DATA_DIR / "publications.json"
@@ -59,8 +59,11 @@ def build_publication_entries(author: dict) -> list:
             year = int(bib.get("pub_year", 0))
         except (TypeError, ValueError):
             year = 0
-        return (year, pub.get("num_citations", 0))
+        return year
 
+    # Sort by year only. Python's sort is stable, so within a year we keep
+    # Google Scholar's own sortby="year" order (newest first) instead of
+    # floating older, more-cited papers above brand-new ones.
     pubs_sorted = sorted(pubs, key=sort_key, reverse=True)
 
     entries = []
@@ -80,7 +83,13 @@ def build_publication_entries(author: dict) -> list:
                 "citation": citation_text,
                 "num_citations": pub.get("num_citations", 0),
                 "badge": infer_badge(citation_text),
-                "url": pub.get("pub_url", ""),
+                "url": pub.get("pub_url")
+                or (
+                    "https://scholar.google.com/citations?view_op=view_citation"
+                    f"&citation_for_view={pub['author_pub_id']}"
+                    if pub.get("author_pub_id")
+                    else ""
+                ),
             }
         )
         if len(entries) >= MAX_PUBLICATIONS:

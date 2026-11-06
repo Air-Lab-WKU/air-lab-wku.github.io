@@ -2,8 +2,9 @@ name: Update Google Scholar data
 
 on:
   schedule:
-    # Every Monday at 13:00 UTC
-    - cron: '0 13 * * 1'
+    # Monday, Wednesday and Friday at 13:00 UTC. More often than this and
+    # Google Scholar starts blocking the runner, which turns runs red.
+    - cron: '0 13 * * 1,3,5'
   workflow_dispatch: {}
 
 permissions:

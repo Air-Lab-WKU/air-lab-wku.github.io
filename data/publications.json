@@ -1,13 +1,93 @@
 {
-  "last_updated": "2026-10-06T18:24:56+00:00",
+  "last_updated": "2026-11-06T02:43:25+00:00",
   "entries": [
     {
-      "title": "EpiClim: weekly district-wise all-India multi-epidemics climate-health dataset for accelerated GeoHealth research",
-      "year": "2026",
-      "citation": "Environmental Research: Health 4 (1), 014501, 2026",
-      "num_citations": 13,
+      "title": "AI For Land Systems: Advances In Machine Learning For Land Modeling And Prediction",
+      "year": "2027",
+      "citation": "107th AMS Annual Meeting, 2027",
+      "num_citations": 0,
       "badge": "Journal",
-      "url": ""
+      "url": "https://scholar.google.com/citations?view_op=view_citation&citation_for_view=4F4aasoAAAAJ:X0DADzN9RKwC"
+    },
+    {
+      "title": "Artificial Intelligence For Disaster Prediction, Response, And Resilience",
+      "year": "2027",
+      "citation": "107th AMS Annual Meeting, 2027",
+      "num_citations": 0,
+      "badge": "Journal",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&citation_for_view=4F4aasoAAAAJ:NMlhSUseqAsC"
+    },
+    {
+      "title": "GPU-Accelerated Street-Scale Heat Exposure Modeling for Urban Event Planning: The Paris 2024 Olympic Marathon",
+      "year": "2027",
+      "citation": "107th AMS Annual Meeting, 2027",
+      "num_citations": 0,
+      "badge": "Journal",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&citation_for_view=4F4aasoAAAAJ:JP7YXuLIOvAC"
+    },
+    {
+      "title": "AirCast-SR: A Foundation Model for Kilometer-Scale Atmospheric Super-Resolution via Conditional Diffusion",
+      "year": "2027",
+      "citation": "107th AMS Annual Meeting, 2027",
+      "num_citations": 0,
+      "badge": "Journal",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&citation_for_view=4F4aasoAAAAJ:ZqE1mSdD_DYC"
+    },
+    {
+      "title": "AirCast-S2S: A Coupled Data-Driven Atmosphere\u2013Ocean\u2013Land Model for Subseasonal to Seasonal Prediction",
+      "year": "2027",
+      "citation": "107th AMS Annual Meeting, 2027",
+      "num_citations": 0,
+      "badge": "Journal",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&citation_for_view=4F4aasoAAAAJ:jtI9f0ekYq0C"
+    },
+    {
+      "title": "Discrete-Level Interpretability in Medium-Range Lightning Prediction: A Data-Efficient Reproduction and Extension of BoltCast",
+      "year": "2027",
+      "citation": "107th AMS Annual Meeting, 2027",
+      "num_citations": 0,
+      "badge": "Journal",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&citation_for_view=4F4aasoAAAAJ:-uzm3Y7AvW0C"
+    },
+    {
+      "title": "Reinforcement learning in medicine: Foundational models for personalised decision support",
+      "year": "2027",
+      "citation": "Artificial Intelligence for Medical Data Processing, 160-189, 2027",
+      "num_citations": 0,
+      "badge": "Journal",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&citation_for_view=4F4aasoAAAAJ:z8nqeaKD1nsC"
+    },
+    {
+      "title": "An optimized hybrid deep learning framework for short-range rainfall forecasting in Mumbai\u2019s monsoon regime",
+      "year": "2026",
+      "citation": "Environmental Research Communications, 2026",
+      "num_citations": 0,
+      "badge": "Journal",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&citation_for_view=4F4aasoAAAAJ:KWzIFqRkAKkC"
+    },
+    {
+      "title": "Generative Diffusion Outperforms Quantile Mapping for Climate Downscaling Across Scales",
+      "year": "2026",
+      "citation": "",
+      "num_citations": 0,
+      "badge": "Journal",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&citation_for_view=4F4aasoAAAAJ:T_ojBgVMvoEC"
+    },
+    {
+      "title": "Steering Diffusion Priors with Sparse Observations for High-Resolution Temperature Downscaling",
+      "year": "2026",
+      "citation": "arXiv preprint arXiv:2609.09247, 2026",
+      "num_citations": 0,
+      "badge": "Preprint",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&citation_for_view=4F4aasoAAAAJ:SAZ1SQo2q1kC"
+    },
+    {
+      "title": "CropFusionNet: an interpretable deep learning framework for uncertainty-aware crop yield forecasting across Germany",
+      "year": "2026",
+      "citation": "Artificial Intelligence in Agriculture, 2026",
+      "num_citations": 0,
+      "badge": "Journal",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&citation_for_view=4F4aasoAAAAJ:qE4H1tSSYIIC"
     },
     {
       "title": "The Paris 2024 Olympics Research Demonstration Project",
@@ -15,31 +95,15 @@
       "citation": "Bulletin of the American Meteorological Society 107 (9), E2130-E2151, 2026",
       "num_citations": 3,
       "badge": "Journal",
-      "url": ""
+      "url": "https://scholar.google.com/citations?view_op=view_citation&citation_for_view=4F4aasoAAAAJ:v6i8RKmR8ToC"
     },
     {
-      "title": "SOLWEIG-GPU: GPU-accelerated Thermal comfort modeling framework for Urban digital twins",
+      "title": "AFDBench: A Reasoning-First AI Scientist for NationalWeather Service Forecast Discussions",
       "year": "2026",
-      "citation": "Journal of Open Source Software 11 (118), 9535, 2026",
-      "num_citations": 3,
-      "badge": "Journal",
-      "url": ""
-    },
-    {
-      "title": "Climate Change, Environmental Degradation, and Human Health: A Converging Crisis",
-      "year": "2026",
-      "citation": "Habitable Planet 2 (1), 108-127, 2026",
-      "num_citations": 2,
-      "badge": "Journal",
-      "url": ""
-    },
-    {
-      "title": "Urban heat mitigation under realistic roof and land area constraints",
-      "year": "2026",
-      "citation": "Environmental Research Letters 21 (2), 024001, 2026",
-      "num_citations": 2,
-      "badge": "Journal",
-      "url": ""
+      "citation": "arXiv preprint arXiv:2608.24954, 2026",
+      "num_citations": 1,
+      "badge": "Preprint",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&citation_for_view=4F4aasoAAAAJ:Wq2b2clWBLsC"
     },
     {
       "title": "Harnessing Land\u2013Atmosphere Interactions to Enhance Subseasonal-to-Seasonal Predictability",
@@ -47,23 +111,15 @@
       "citation": "Bulletin of the American Meteorological Society 107 (8), E1854-E1861, 2026",
       "num_citations": 1,
       "badge": "Journal",
-      "url": ""
+      "url": "https://scholar.google.com/citations?view_op=view_citation&citation_for_view=4F4aasoAAAAJ:_OXeSy2IsFwC"
     },
     {
-      "title": "A deep learning bias-correction layer for land surface models: application to soil moisture during drought and hurricane events",
+      "title": "Evaluating the Fidelity of GraphCast AI Forecasts for the Indian Summer Monsoon: A Climatological Assessment Against ERA-5 Reanalysis and IMERG Observations",
       "year": "2026",
-      "citation": "Machine Learning: Earth 2 (1), 01LT02, 2026",
-      "num_citations": 1,
-      "badge": "Journal",
-      "url": ""
-    },
-    {
-      "title": "AirCast-SR: A Foundation Model for Kilometer-Scale Atmospheric Super-Resolution via Latent Consistency Diffusion",
-      "year": "2026",
-      "citation": "arXiv preprint arXiv:2605.26130, 2026",
-      "num_citations": 1,
+      "citation": "arXiv preprint arXiv:2607.11905, 2026",
+      "num_citations": 0,
       "badge": "Preprint",
-      "url": ""
+      "url": "https://scholar.google.com/citations?view_op=view_citation&citation_for_view=4F4aasoAAAAJ:27LrP4qxOz0C"
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-06T02:43:25+00:00",
+  "last_updated": "2026-11-09T22:46:19+00:00",
   "entries": [
     {
       "title": "AI For Land Systems: Advances In Machine Learning For Land Modeling And Prediction",
@@ -48,14 +48,6 @@
       "num_citations": 0,
       "badge": "Journal",
       "url": "https://scholar.google.com/citations?view_op=view_citation&citation_for_view=4F4aasoAAAAJ:-uzm3Y7AvW0C"
-    },
-    {
-      "title": "Reinforcement learning in medicine: Foundational models for personalised decision support",
-      "year": "2027",
-      "citation": "Artificial Intelligence for Medical Data Processing, 160-189, 2027",
-      "num_citations": 0,
-      "badge": "Journal",
-      "url": "https://scholar.google.com/citations?view_op=view_citation&citation_for_view=4F4aasoAAAAJ:z8nqeaKD1nsC"
     },
     {
       "title": "An optimized hybrid deep learning framework for short-range rainfall forecasting in Mumbai\u2019s monsoon regime",
@@ -120,6 +112,14 @@
       "num_citations": 0,
       "badge": "Preprint",
       "url": "https://scholar.google.com/citations?view_op=view_citation&citation_for_view=4F4aasoAAAAJ:27LrP4qxOz0C"
+    },
+    {
+      "title": "Aircast-Mars: A Mars Foundation Model for Global Weather Forecasting with HEALPix-Aware Convolutions",
+      "year": "2026",
+      "citation": "arXiv preprint arXiv:2607.19370, 2026",
+      "num_citations": 1,
+      "badge": "Preprint",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&citation_for_view=4F4aasoAAAAJ:YlPif8NxrbYC"
     }
   ]
 }
